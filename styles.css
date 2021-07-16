@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-direction: column;
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(img/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container::before{
+    content: '';
+    position: absolute;
+    background-color: hsla(191,85%,90%,0.438);
+    width: 100%;
+    height: 100%;
+}
+.container .container_box{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: 2em 40px;
+}
+.container .container_box nav{
+    width: 100%;
+    height: 90px;
+    padding: 20px 0;
+}
+.container .container_box nav .menu{
+    display: flex;
+}
+.container .container_box nav .menu li{
+    list-style: none;
+}
+.container .container_box nav .menu li a{
+    margin-right: 1em;
+    text-decoration: none;
+    color: #154979;
+    font-weight: 600;
+}
+.container .container_box .container_text{
+    width: 40%;
+}
+.container .container_box .container_text h1{
+    color: #154979;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+}
+.container .container_box .container_text h1 .title{
+    font-size: 3.25rem;
+}
+.container .container_box .container_text h1 .subtittle{
+    font-size: 1.5rem;
+}
+.container .container_box .container_text p{
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+}
+.container .container_box .container_text button{
+    width: 300px;
+    background-color: #eb5656;
+    color: #ffffff;
+    padding: .5rem 1em;
+    border: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.container .container_box .container_text button:hover{
+    background-color: #ce4747;
+}
+@media(max-width:1000px){
+    .container, .container .container_box,.container .container_box nav .menu{
+        justify-content: center;
+        align-items: center;
+    }
+    .container .container_box .container_text{
+        text-align: center;
+        width: 100%;
+    }
+    .container .container_box .container_text h1 .title{
+        font-size: 2.75rem;
+    }
+
+}
